@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Post } from 'src/app/model/post';
 import { StorageService } from 'src/app/services/storage.service';
 
@@ -8,8 +8,11 @@ import { StorageService } from 'src/app/services/storage.service';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
+  @Input() posts?: Post
 
-  postsArray:Post[]=[]
+  
+
+  
   constructor(public storage:StorageService){
     
 

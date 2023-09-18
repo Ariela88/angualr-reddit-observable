@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ListComponent } from './components/list/list.component';
 import { CardComponent } from './components/card/card.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
 
 
 
@@ -17,7 +18,8 @@ import { CardComponent } from './components/card/card.component';
     AppComponent,
     HeaderComponent,
     ListComponent,
-    CardComponent
+    CardComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,21 +1,21 @@
-<ul>
+<ul *ngIf="posts">
     <li>
       <div class="card">
-        <img class="post-image" src="{{post.thumbnail.includes('http')? post.thumbnail : './assets/thumb.png'}}" alt="post thumbnail">
+        <img class="post-image" src="{{posts.thumbnail.includes('http')? posts.thumbnail : './assets/thumb.png'}}" alt="post thumbnail">
         <div class="post-text">
-          <span>{{post.title}}</span>
-          <span>{{post.author}}</span>
-          <span>{{post.created}}</span>
+          <span>{{posts.title}}</span>
+          <span>{{posts.author}}</span>
+          <span>{{posts.created}}</span>
         </div>
         <div class="spacer"></div>
         <div class="buttons-container">
-          <button (click)="storage.toggleFavourites(post)">{{storage.isFavourite(post)?'rimuovi':'salva'}}</button>
-          <a href="{{post.url}}">
+          <button (click)="storage.toggleFavourites(posts)">{{storage.isFavourite(posts)?'rimuovi':'salva'}}</button>
+          <a href="{{posts.url}}">
             <button>Vai al Link</button>
           </a>
-          <a href="{{'https://www.reddit.com/'+post.permalink}}">
-            <button>Vai al Reddit</button>
-          </a>
+          <!-- <a href="{{'https://www.reddit.com/'+post.permalink}}"> -->
+            <!-- <button>Vai al Reddit</button>
+          </a> -->
         </div>
       </div>
     </li>
