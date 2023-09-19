@@ -11,7 +11,6 @@ import { ListComponent } from './components/list/list.component';
 import { CardComponent } from './components/card/card.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

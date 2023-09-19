@@ -14,6 +14,7 @@ export class ListComponent implements OnInit {
   constructor(private reddit: RedditService, public storage:StorageService) {}
 
   ngOnInit(): void {
+   
     this.reddit.getRedditPosts().subscribe(childrenData => this.posts = childrenData);
   }
 

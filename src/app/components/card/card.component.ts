@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Post } from 'src/app/model/post';
 import { StorageService } from 'src/app/services/storage.service';
-import { Post } from '../list/list.component';
-import { RedditService } from 'src/app/services/reddit.service';
 
 @Component({
   selector: 'app-card',
@@ -9,7 +8,14 @@ import { RedditService } from 'src/app/services/reddit.service';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
+  @Input() posts?: Post
 
-  @Input() post: Post[] = [];
+
+
+
+  constructor(public storage:StorageService){
+
+
+  }
 
 }
